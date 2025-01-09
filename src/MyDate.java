@@ -105,6 +105,7 @@ public class MyDate {
         return this;
     }
     public MyDate nextMonth() {
+        isLeapYear(year);
         if (month < 12) {
             month++;
         } else {
@@ -130,6 +131,7 @@ public class MyDate {
         return this;
     }
     public MyDate previousDay() {
+        isLeapYear(year);
         if (day > 1) {
             day--;
         } else {
@@ -140,6 +142,7 @@ public class MyDate {
     }
 
     public MyDate previousMonth() {
+        isLeapYear(year);
         if (month > 1) {
             month--;
         } else {
